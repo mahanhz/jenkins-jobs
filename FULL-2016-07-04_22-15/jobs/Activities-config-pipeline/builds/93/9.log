@@ -1,0 +1,2 @@
+[Activities-config-pipeline] Running shell script
++ git rev-parse HEAD

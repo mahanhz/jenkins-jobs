@@ -1,0 +1,52 @@
+Started by user [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgZh/dLi1CL9rNS87My84vjElNzMPABy3sl5yAAAAA==[0mMahan Hashemizadeh
+Cloning the remote Git repository
+Cloning repository https://github.com/mahanhz/activities-config-microservice.git
+ > git init /var/lib/jenkins/workspace/Activities-config-deploy-snapshot@script # timeout=10
+Fetching upstream changes from https://github.com/mahanhz/activities-config-microservice.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git3181179020170863011.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mahanhz/activities-config-microservice.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git config remote.origin.url https://github.com/mahanhz/activities-config-microservice.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/mahanhz/activities-config-microservice.git # timeout=10
+Fetching upstream changes from https://github.com/mahanhz/activities-config-microservice.git
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git102017896274832300.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mahanhz/activities-config-microservice.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision ef08360cb90d0fa04137b5672f0b6fb31e49adce (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ef08360cb90d0fa04137b5672f0b6fb31e49adce
+ > git rev-list 55fef2f396942f867885fb0eef5ecc1378b72f29 # timeout=10
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage (Approve deploy?)
+Entering stage Approve deploy?
+Proceeding
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] timeout
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] input
+Deploy snapshot?
+[8mha:AAABLh+LCAAAAAAAAP9djzFOwzAUhl9SAStiRGzMtZNUhKSoAypIIFWAVC7gJE7i1tjGfmmbpYfgGrAgcQUOwQXYmBlYCHSCN/z/v3yf9J4+YMtZONO2IjOu5kK5XBAjm6pbZKntvJR6SVxjjLZIHHLjiFCmQXJzPb29aA23Uqj5lUa++9Z7+Tz+evfBm0CvsRJhbzJjC0YlUxWdohWqOllZOKibwmlFcq2clpz8scSjx+fRg3n1wb+EbclVhfVGdw9r8Dp8/x8+3vQPDJvzfICV6cYOgneIgDWiGVIaphEJ44SEZBAOB2EQ0pnO6GmOYiFQcNfvlKWo+gU3Urd9p5hxtUYa0d+X6ZincVFGjCWsyyCPgqM0ZmkSsKhMsiygxuqc8+L8zmD7DV2xK9lbAQAA[0mProceed or [8mha:AAABKR+LCAAAAAAAAP9dkD1Ow0AQRseOQo0oER11dm1HGDsoBQoFSBEghQus7bW99rK77I7z03AIrgENElfgEFyAjpqCBkMqmGLma96T5nv6gKGzcKZtRRquWqFcLoiRXdUnstK2LaVeEdcZoy0Sh9w4IpTpkFxfLW7ON4ZbKVR7qZHvvg1ePo+/3n3w5jDorETYmzdsyahkqqILtEJVJ2sLB3VXOK1IrpXTkpM/lnj6+Dx9MK8++BewI7mqsN7q7uAevB7f/4fPtvcHhu14PsDa9GGI4B0i3NaIZkJpmEYkjBMSknE4GYdBSBud0dMcxVKg4G7UK0tRjQpupN6MnGLG1RppRH9fpjOexkUZMZawfgd5FBylMUuTgEVlkmUBZVnf0jdj27x9VAEAAA==[0mAbort
+Approved by [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgZh/dLi1CL9rNS87My84vjElNzMPABy3sl5yAAAAA==[0mMahan Hashemizadeh
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // timeout
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage (Deploy snapshot)
+Entering stage Deploy snapshot
+Proceeding
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] node
+Running on master in /var/lib/jenkins/workspace/Activities-config-deploy-snapshot
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[Activities-config-deploy-snapshot] Running shell script
++ ./gradlew deployToProduction -PrepoId=snapshots -PartifactVersion=LATEST
+/var/lib/jenkins/workspace/Activities-config-deploy-snapshot@tmp/durable-00255286/script.sh: 2: /var/lib/jenkins/workspace/Activities-config-deploy-snapshot@tmp/durable-00255286/script.sh: ./gradlew: not found
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // node
+[8mha:AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] End of Pipeline
+ERROR: script returned exit code 127
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mFinished: FAILURE

@@ -1,0 +1,16 @@
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mahanhz/participant-microservice.git # timeout=10
+Fetching upstream changes from https://github.com/mahanhz/participant-microservice.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git7061549188477735735.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mahanhz/participant-microservice.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/mhz-create
+Seen 2 remote branches
+Checking out Revision 5f9e9a7056f56050078d06923c3dbd7032ab5af3 (origin/mhz-create)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5f9e9a7056f56050078d06923c3dbd7032ab5af3

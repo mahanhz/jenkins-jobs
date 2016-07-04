@@ -1,0 +1,4 @@
+[Participant-pipeline@3] Running shell script
++ ./gradlew clean assemble
+Sending interrupt signal to process
+Terminated

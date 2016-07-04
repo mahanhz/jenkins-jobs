@@ -1,0 +1,12 @@
+commit b16fdbccb2b0b7958fab447777d0237befb22871
+tree e41437994d9dc4dc203e10f563fe1a6a7b424eda
+parent 0a12b7392c30c9797c1ddf04cb4f883973f84c43
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 11:29:17 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 11:29:17 +0200
+
+    give gradlew execute permission after unstash
+
+
+
+:100644 100644 b3efa2a70a18fe823d9ebced1ade941b119b14c5 f34335848e17ecc095a0464799e65eccfd4851f6 M	Jenkinsfile
+:100644 100644 e88f2ab3061139656af6b42020bbc42828c0fca2 97ea917d6f20ed47effe68f48a4499d5c2b47bd5 M	Jenkinsfile-deploy-snapshot

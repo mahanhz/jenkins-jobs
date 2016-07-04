@@ -1,0 +1,23 @@
+commit 5d686882c42949768c14427fca63dbc96ec8f5a4
+tree f1ef1bc2c3228954913e6455b2ae14b5c85766ea
+parent 2f33a03e21e2d8bbcee8ba55e34b60c73f6c1155
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 19:40:15 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 19:40:15 +0200
+
+    Added ability to deploy specific version
+
+
+
+:100644 100644 443ea0ebd7b0cddfe70f7abf46f97c6923c71c4d 92c9ebb213b0e8834eee016a5c2235c8435cac92 M	Jenkinsfile
+:100644 100644 fe22b00670262787bf511b98e579f51531fa3243 f5bd0ac88230b8421279ffa0e7d03b51fe7eb460 M	Jenkinsfile-deploy-production
+commit 2f33a03e21e2d8bbcee8ba55e34b60c73f6c1155
+tree 24d8604eb105f34d989e55ab9340bc4849afea82
+parent ff15d7166f5ca3cfa64dabdf7ee6c6cb875921f7
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 19:06:29 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 19:06:29 +0200
+
+    [Gradle Release Plugin] - pre tag commit:  '2.0.0'.
+
+
+
+:100644 100644 166aa4a7097d324e4feaea688eb82d563433245b e997a9af99480513b8a1080ac51dc327263cdee2 M	gradle.properties

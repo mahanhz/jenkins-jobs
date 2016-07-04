@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.3">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>jenkins_admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@2.5.0">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>4ede5da183db20851d4e7d00feb116b893457ac7</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>4</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/mahanhz/activities-config-microservice.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.5.0">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/lib/jenkins/workspace/Activities-config-deploy-production@script</ws>
+    </hudson.plugins.git.GitTagAction>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.1">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/mahanhz/activities-config-microservice.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.workflow.support.steps.input.InputAction plugin="pipeline-input-step@2.0">
+      <ids class="java.util.concurrent.CopyOnWriteArrayList"/>
+    </org.jenkinsci.plugins.workflow.support.steps.input.InputAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction plugin="pipeline-input-step@2.0">
+      <userId>jenkins_admin</userId>
+    </org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction plugin="pipeline-input-step@2.0">
+      <userId>jenkins_admin</userId>
+    </org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction>
+  </actions>
+  <queueId>233</queueId>
+  <timestamp>1467654497872</timestamp>
+  <startTime>1467654497876</startTime>
+  <result>SUCCESS</result>
+  <duration>155084</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>#!groovy
+
+SELECTED_DEPLOYMENT_OPTION = &quot;latest&quot;
+SPECIFIC_VERSION = &quot;&quot;
+
+stage &apos;Approve deploy?&apos;
+timeout(time: 5, unit: &apos;MINUTES&apos;) {
+    SELECTED_DEPLOYMENT_OPTION =
+    input message: &apos;Deploy to production?&apos;, parameters: [[$class: &apos;ChoiceParameterDefinition&apos;,
+                                                          choices: &apos;latest\nspecific&apos;,
+                                                          description: &apos;Semantic version segment to update&apos;,
+                                                          name: &apos;DEPLOYMENT_OPTION&apos;]]
+    if (SELECTED_DEPLOYMENT_OPTION == &quot;specific&quot;) {
+        SPECIFIC_VERSION =
+                input message: &apos;Enter version?&apos;, parameters: [[$class: &apos;StringParameterDefinition&apos;,
+                                                               defaultValue: &apos;&apos;,
+                                                               description: &apos;Specific version to deploy&apos;,
+                                                               name: &apos;SPECIFIC_VERSION_TO_DEPLOY&apos;]]
+    }
+}
+
+stage name: &apos;Deploy production&apos;, concurrency: 1
+node {
+    checkout scm
+    
+    stash excludes: &apos;build/&apos;, includes: &apos;**&apos;, name: &apos;source&apos;
+
+    if (SELECTED_DEPLOYMENT_OPTION == &quot;latest&quot;) {
+        sh &apos;&apos;&apos;TAG=`git describe --abbrev=0`
+              ./gradlew deployToProduction -PrepoId=releases -PartifactVersion=$TAG&apos;&apos;&apos;
+    } else if (SELECTED_DEPLOYMENT_OPTION == &quot;specific&quot;) {
+        echo &quot;Deploying specific version: ${SPECIFIC_VERSION}&quot;
+        sh &apos;./gradlew deployToProduction -PrepoId=releases -PartifactVersion=&apos; + SPECIFIC_VERSION
+    } else {
+        throw new RuntimeException(&quot;Invalid deployment option selected: ${SELECTED_DEPLOYMENT_OPTION}&quot;)
+    }
+
+
+}
+
+stage &apos;Health check&apos;
+node {
+    retry(5) {
+        // Give the application some time to start up
+        // sleep 30
+
+        unstash &apos;source&apos;
+        sh &apos;chmod 755 gradlew&apos;
+
+        sh &apos;SPRING_PROFILES_ACTIVE=prodServer1 ./gradlew smokeTest&apos;
+    }
+}
+
+</script>
+    <loadedScripts class="map"/>
+    <sandbox>true</sandbox>
+    <iota>31</iota>
+    <head>1:31</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/mahanhz/activities-config-microservice.git</url>
+            <credentialsId>620e1fdc-9ae7-4f9d-aa0f-701a3482ef49</credentialsId>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.WipeWorkspace/>
+        </extensions>
+      </scm>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/Activities-config-deploy-production@script</workspace>
+      <changelogFile>/var/lib/jenkins/jobs/Activities-config-deploy-production/builds/4/changelog0.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" reference="../../org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout/scm"/>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/Activities-config-deploy-production</workspace>
+      <changelogFile>/var/lib/jenkins/jobs/Activities-config-deploy-production/builds/4/changelog1.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

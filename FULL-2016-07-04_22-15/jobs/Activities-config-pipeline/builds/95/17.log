@@ -1,0 +1,2 @@
+[Activities-config-pipeline] Running shell script
++ chmod 755 gradlew

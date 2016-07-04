@@ -1,0 +1,54 @@
+Started by upstream project "[8mha:AAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAypEgYF/az8JH3H5JLMssySzNRiXaC2tMx03YLMglSgG1L1ARge9/DVAAAA[0mActivities-config-pipeline" build number [8mha:AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYl/az8JH3H5JLMssySzNRiXaC2tMx03YLMglSgG1L1LY0BtIsHztcAAAA=[0m93
+originally caused by:
+ Started by an SCM change
+Building in workspace /var/lib/jenkins/workspace/Activities-config-merge
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository https://github.com/mahanhz/activities-config-microservice.git
+ > git init /var/lib/jenkins/workspace/Activities-config-merge # timeout=10
+Fetching upstream changes from https://github.com/mahanhz/activities-config-microservice.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git356461321437239723.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mahanhz/activities-config-microservice.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git config remote.origin.url https://github.com/mahanhz/activities-config-microservice.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/mahanhz/activities-config-microservice.git # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+No valid HEAD. Skipping the resetting
+ > git clean -fdx # timeout=10
+Fetching upstream changes from https://github.com/mahanhz/activities-config-microservice.git
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git3671948560163870573.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mahanhz/activities-config-microservice.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2^{commit} # timeout=10
+Merging Revision 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2 (detached) to origin/master, UserMergeOptions{mergeRemote='origin', mergeTarget='master', mergeStrategy='recursive', fastForwardMode='--no-ff'}
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f origin/master
+ > git merge -s recursive --no-ff 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2 # timeout=10
+ > git rev-parse HEAD^{commit} # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/mhz-1.0.0
+Seen 2 remote branches
+Checking out Revision 0371c58ac086302f36539a8c70861729c2becd3d (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0371c58ac086302f36539a8c70861729c2becd3d
+ > git rev-list baa3078a0978115b8839d4ec64c520bfcf27d1a6 # timeout=10
+ > git tag -l jenkins-Activities-config-merge-57 # timeout=10
+ > git tag -a -f -m Jenkins Build #57 jenkins-Activities-config-merge-57-SUCCESS # timeout=10
+Pushing HEAD to branch master of origin repository
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git7826620993497428598.credentials # timeout=10
+ > git -c core.askpass=true push https://github.com/mahanhz/activities-config-microservice.git HEAD:master
+ > git config --local --remove-section credential # timeout=10
+Notifying upstream projects of job completion
+Join notifier cannot find upstream project: Activities-config-pipeline
+Finished: SUCCESS
