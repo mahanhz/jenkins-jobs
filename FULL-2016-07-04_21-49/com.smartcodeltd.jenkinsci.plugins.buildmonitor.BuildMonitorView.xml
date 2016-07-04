@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorDescriptor plugin="build-monitor-plugin@1.9+build.201606131328">
-  <permissionToCollectAnonymousUsageStatistics>false</permissionToCollectAnonymousUsageStatistics>
-</com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorDescriptor>
