@@ -1,0 +1,56 @@
+commit 0a12b7392c30c9797c1ddf04cb4f883973f84c43
+tree 6d9942b8ade3f81e2af1648369111fa3a0566a7a
+parent 4f00f6e619acec7fae0ac8621c13657f2c1a1dc4
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:34:26 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:34:26 +0200
+
+    Remove sudo
+
+
+
+:100644 100644 c2e3a1b36feae4d3d63745841db5dda0abe12222 b3efa2a70a18fe823d9ebced1ade941b119b14c5 M	Jenkinsfile
+commit 4f00f6e619acec7fae0ac8621c13657f2c1a1dc4
+tree cfa1f4ecbe8431b1307aa58b79c9f9ede99e076f
+parent 8d5a23da750899c476323745c72f3c1618d56f27
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:31:43 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:31:43 +0200
+
+    Need to make gradlew file executable
+
+
+
+:100644 100644 25a628a8967f0ba1fd76db23026294a4dc4171bf c2e3a1b36feae4d3d63745841db5dda0abe12222 M	Jenkinsfile
+commit 8d5a23da750899c476323745c72f3c1618d56f27
+tree 4575db569de429facd30ed4336aad7fc89c4e8b9
+parent b6a3c706199d02b4843f57141bc7593afac86157
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:22:51 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:22:51 +0200
+
+    Corrected unstash
+
+
+
+:100644 100644 f88610a51f39db0b0b13869194feb12f42a5176b 25a628a8967f0ba1fd76db23026294a4dc4171bf M	Jenkinsfile
+commit b6a3c706199d02b4843f57141bc7593afac86157
+tree 4ef1d8fe73ef1bde1cf569798df230e4c40c3317
+parent a31edc2b8987287372b271e4fbebe41f06c83c29
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:11:28 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 01:11:28 +0200
+
+    Stash and unstash
+
+
+
+:100644 100644 e83f7bd0acc29bc3cfa72e9fdc17537317f8b1a7 f88610a51f39db0b0b13869194feb12f42a5176b M	Jenkinsfile
+:100644 100644 fc394ab3cfc9969063ee08325e9a071a0710ba13 e88f2ab3061139656af6b42020bbc42828c0fca2 M	Jenkinsfile-deploy-snapshot
+commit a31edc2b8987287372b271e4fbebe41f06c83c29
+tree ae0cc634ad996d14a27962b3068ec7eee18b92a6
+parent 5acd6b978581f26647bea29d8a93f1fcf96ede81
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 00:55:39 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-03 00:55:39 +0200
+
+    Added checkout step and commented out sleep
+
+
+
+:100644 100644 a3c4a0b0473b4e4904f7b4c207d02f07b9c265d3 fc394ab3cfc9969063ee08325e9a071a0710ba13 M	Jenkinsfile-deploy-snapshot

@@ -1,0 +1,3 @@
+[Activities-config-deploy-snapshot] Running shell script
++ ./gradlew deployToProduction -PrepoId=snapshots -PartifactVersion=LATEST
+/var/lib/jenkins/workspace/Activities-config-deploy-snapshot@tmp/durable-00255286/script.sh: 2: /var/lib/jenkins/workspace/Activities-config-deploy-snapshot@tmp/durable-00255286/script.sh: ./gradlew: not found

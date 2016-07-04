@@ -1,0 +1,2 @@
+[Activities-config-deploy-production] Running shell script
++ chmod 755 gradlew

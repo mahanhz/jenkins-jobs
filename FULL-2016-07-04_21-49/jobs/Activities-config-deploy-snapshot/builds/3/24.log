@@ -1,0 +1,15 @@
+[Activities-config-deploy-snapshot] Running shell script
++ SPRING_PROFILES_ACTIVE=prodServer1 ./gradlew smokeTest
+:compileJava
+:processResources
+:classes
+:compileTestJava
+:processTestResources
+:testClasses
+:smokeTest
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 6.785 secs
+
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html

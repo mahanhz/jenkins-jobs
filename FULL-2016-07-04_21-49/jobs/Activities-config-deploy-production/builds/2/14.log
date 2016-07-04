@@ -1,0 +1,24 @@
+[Activities-config-deploy-production] Running shell script
++ git describe --abbrev=0
++ TAG=2.0.0
++ echo Deploy version 2.0.0
+Deploy version 2.0.0
++ ./gradlew deployToProduction -PrepoId=releases -PartifactVersion=2.0.0
+:deployToProduction
+prodServer1#4|Passed in arguments are: releases, 2.0.0, activities_config_
+prodServer1#4|This script assumes that the appadm user exists
+prodServer1#4|Set up application directory (assuming /opt folder already exists)
+prodServer1#4|Set up Log directory (assuming /var/opt folder already exists)
+prodServer1#4|Get the jar file from Nexus
+prodServer1#4|http://192.168.1.31:8082/nexus/service/local/artifact/maven/content?r=releases&g=com.amhzing.activities-config&a=activities-config-microservice&v=2.0.0
+prodServer1#4|Move the conf folder (this assumes that the conf file was placed in the user's home directory)
+prodServer1#4|Create a symlink
+prodServer1#4|Set up the application to start automatically on boot
+prodServer1#4|ln: failed to create symbolic link ‘/etc/init.d/activities-config-microservice’: File exists
+prodServer1#4|Restart the app
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 7.902 secs
+
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html

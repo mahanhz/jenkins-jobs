@@ -1,0 +1,21 @@
+[Activities-config-pipeline] Running shell script
++ ./gradlew build snapshot uploadArchives -x test
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:findMainClass
+:jar
+:bootRepackage
+:assemble
+:check
+:build
+:snapshot
+Building snapshot version=1.1.0-SNAPSHOT
+:uploadArchivesCould not find metadata com.amhzing.activities-config:activities-config-microservice:1.1.0-SNAPSHOT/maven-metadata.xml in remote (http://192.168.1.31:8082/nexus/content/repositories/snapshots)
+
+
+BUILD SUCCESSFUL
+
+Total time: 45.287 secs
+
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html

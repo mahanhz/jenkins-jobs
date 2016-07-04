@@ -1,0 +1,37 @@
+Started on 04-Jul-2016 18:59:03
+Using strategy: Ancestry
+[poll] Last Built Revision: Revision 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2 (origin/mhz-1.0.0)
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/mahanhz/activities-config-microservice.git # timeout=10
+Fetching upstream changes from https://github.com/mahanhz/activities-config-microservice.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git8682459818287556675.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mahanhz/activities-config-microservice.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Polling for changes in
+Seen branch in repository origin/master
+Seen branch in repository origin/mhz-1.0.0
+Seen 2 remote branches
+ > git log --full-history --no-abbrev --format=raw -M -m 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2..162ea46a49c9d45dc23182b268c8916e21775038 # timeout=10
+Using strategy: Ancestry
+[poll] Last Built Revision: Revision 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2 (origin/mhz-1.0.0)
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/mahanhz/activities-config-microservice.git # timeout=10
+Fetching upstream changes from https://github.com/mahanhz/activities-config-microservice.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mahanhz # timeout=10
+ > git config --local credential.helper store --file=/tmp/git861118044296847401.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mahanhz/activities-config-microservice.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Polling for changes in
+Seen branch in repository origin/master
+Seen branch in repository origin/mhz-1.0.0
+Seen 2 remote branches
+ > git log --full-history --no-abbrev --format=raw -M -m 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2..162ea46a49c9d45dc23182b268c8916e21775038 # timeout=10
+Done. Took 3.1 sec
+Changes found

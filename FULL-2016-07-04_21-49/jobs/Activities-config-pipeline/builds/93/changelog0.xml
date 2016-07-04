@@ -1,0 +1,11 @@
+commit 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2
+tree 23a6d59e1c6d1d3194616a486dd8b41bc41c9d18
+parent 3cff341419c66002f2410549ad9504ca6c5facb3
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 18:39:12 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 18:39:12 +0200
+
+    Correct stage publish
+
+
+
+:100644 100644 c62633030819268c9e6f17e6f35844d77008cce1 443ea0ebd7b0cddfe70f7abf46f97c6923c71c4d M	Jenkinsfile

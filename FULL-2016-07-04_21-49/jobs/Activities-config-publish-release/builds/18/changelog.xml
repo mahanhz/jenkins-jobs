@@ -1,0 +1,23 @@
+commit 6ae221ede4fad1a0e7461a0be0f0bf339c7e7bf2
+tree 23a6d59e1c6d1d3194616a486dd8b41bc41c9d18
+parent 3cff341419c66002f2410549ad9504ca6c5facb3
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 18:39:12 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 18:39:12 +0200
+
+    Correct stage publish
+
+
+
+:100644 100644 c62633030819268c9e6f17e6f35844d77008cce1 443ea0ebd7b0cddfe70f7abf46f97c6923c71c4d M	Jenkinsfile
+commit 3cff341419c66002f2410549ad9504ca6c5facb3
+tree 5e3868db78d27f020b6a3def02aa9df78eaee249
+parent 412b70544c1333a008f7eaea83df24515bbb59b3
+author Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 18:33:41 +0200
+committer Mahan Hashemizadeh <mahanhz@gmail.com> 2016-07-04 18:33:41 +0200
+
+    Correct updating semantic version
+
+
+
+:100644 100644 1d3c813f5a948e621bd8b5772c3f3786d01a6250 c62633030819268c9e6f17e6f35844d77008cce1 M	Jenkinsfile
+:100755 100755 f67bb7f56b38e3bccd13990abe24b5bf480c2d3d 8aa21212b14647f5f885e5f6ff76f440542270c2 M	scripts/release/activities_config_release.sh
