@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree-map>
+  <entry>
+    <string>Participant-pipeline</string>
+    <tree-map>
+      <entry>
+        <string>Compile</string>
+        <org.jenkinsci.plugins.workflow.support.steps.StageStepExecution_-Stage plugin="pipeline-stage-step@2.1">
+          <holding class="sorted-set">
+            <int>187</int>
+          </holding>
+        </org.jenkinsci.plugins.workflow.support.steps.StageStepExecution_-Stage>
+      </entry>
+      <entry>
+        <string>Unit test</string>
+        <org.jenkinsci.plugins.workflow.support.steps.StageStepExecution_-Stage plugin="pipeline-stage-step@2.1">
+          <holding class="sorted-set">
+            <int>185</int>
+            <int>186</int>
+          </holding>
+        </org.jenkinsci.plugins.workflow.support.steps.StageStepExecution_-Stage>
+      </entry>
+    </tree-map>
+  </entry>
+</tree-map>
